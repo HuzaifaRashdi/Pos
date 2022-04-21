@@ -29,6 +29,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+// user roues
 Route::get('/users',[UserController::class,'index']);
 
 Route::post('/users',[UserController::class,'store']);
@@ -37,9 +38,17 @@ Route::post("/users/{id}",[UserController::class,'update']);
 
 Route::get("/users/{id}",[UserController::class,'destroy']);
 
+// orders routes
+
 Route::get('/orders',[OrderController::class,'index']);
 
+// produsts route
+
 Route::get('/products',[ProductController::class,'index']); 
+
+
+
+// suppliers route
 
 Route::get('/suppliers',[SupplierController::class,'index']); 
 

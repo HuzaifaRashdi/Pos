@@ -60,6 +60,6 @@ public function index()
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 }

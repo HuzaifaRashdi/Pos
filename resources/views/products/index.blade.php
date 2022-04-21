@@ -10,7 +10,7 @@
            <div class="card">
                 <div class="card-header">
                     <h4 style="float: left;">Add Products</h4>
-                    <a href="#" style="float: right;" class="btn btn-dark" data-toggle="modal" data-target="#adduser">
+                    <a href="#" style="float: right;" class="btn btn-dark" data-toggle="modal" data-target="#addproducts">
                     <i class="fa fa-plus"></i>Add New Products </a></div>
                 <div class="card-body">
 
@@ -18,12 +18,12 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
-                            <th>Role</th>
-                            <th>Actions</th>
+                            <th>product Name</th>
+                            <th>Description</th>
+                            <th>Brand</th>
+                            <th>Sell Price</th>
+                            <th>Quantity</th>
+                            <th>Stock</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -159,7 +159,7 @@
 
            <div class="col-md-3">
            <div class="card">
-                <div class="card-header"><h4>Search Users</h4></div>
+                <div class="card-header"><h4>Search Products</h4></div>
                 <div class="card-body">
                   ................
                 </div>
@@ -170,49 +170,49 @@
     </div>
 </div>
 
-<!-- Model of Adding New Users -->
+<!-- Model of Adding New Products -->
 
-<div class="modal right fade" id="adduser" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal right fade" id="addproducts" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="staticBackdropLabel">Add Users</h4>
+        <h4 class="modal-title" id="staticBackdropLabel">Add Produts</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
 
-      <form action="{{url('users') }}" method="post">
+      <form action="{{url('products') }}" method="post">
           @csrf 
           <div class="form-group">
-              <label for="">Name</label>
-              <input type="text" name="name" id="" class="form-control">
+              <label for="">Product Name</label>
+              <input type="text" name="product_name" id="" class="form-control">
           </div>
 
           <div class="form-group">
-              <label for="">Email</label>
-              <input type="email" name="email" id="" class="form-control">
+              <label for="">Stock</label>
+              <input type="number" name="alert_stock" id="" class="form-control">
           </div>
 
           <div class="form-group">
-              <label for="">Phone</label>
-              <input type="text" name="phone" id="" class="form-control">
+              <label for="">Price</label>
+              <input type="number" name="price" id="" class="form-control">
           </div>
 
           <div class="form-group"> 
-              <label for="">Address</label>
-              <input type="address" name="address" id="" class="form-control">
+              <label for="">Quantity</label>
+              <input type="number" name="quantity" id="" class="form-control">
           </div>
 
           <div class="form-group"> 
-              <label for="">Password</label>
-              <input type="password" name="password" id="" class="form-control" >
+              <label for="">Description</label>
+              <textarea name="description" id="" cols="30" rows="2" class="form-control"></textarea>
           </div>
 
           <div class="form-group">
-              <label for="">Confirm Password</label>
-              <input type="password" name="confirm_password" id="" class="form-control">
+              <label for="">Brand</label>
+              <input type="text" name="brand" id="" class="form-control">
           </div>
 
           <div class="form-group">
