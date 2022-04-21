@@ -88,10 +88,10 @@
               <input type="password" name="password" id="" value="{{$user->password}}" class="form-control" >
           </div>
 
-          <!-- <div class="form-group">
+          <div class="form-group">
               <label for="">Confirm Password</label>
               <input type="confirm_password" name="confirm_password" id="" class="form-control">
-          </div> -->
+          </div>
 
           <div class="form-group">
               <label for="">Role</label>
@@ -106,7 +106,7 @@
           </div>
 
         <div class="modal-footer">
-            <button class="btn btn-primary btn-block">Update</button>
+            <button class="btn btn-warning btn-block">Update</button>
         </div>
 
       </form>
@@ -131,8 +131,8 @@
       </div>
       <div class="modal-body">
 
-      <form action="{{url('users',$user->id) }}" method="post">
-      @method('DELETE')
+      <form action="{{url('users',$user->id) }}" method="get">
+          @method('delete')
           @csrf 
          <p>Are you sure are you want to delete this {{$user->name}}?</p>
         <div class="modal-footer">
@@ -211,7 +211,7 @@
 
           <div class="form-group">
               <label for="">Confirm Password</label>
-              <input type="confirm_password" name="confirm_password" id="" class="form-control">
+              <input type="password" name="confirm_password" id="" class="form-control">
           </div>
 
           <div class="form-group">

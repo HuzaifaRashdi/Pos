@@ -35,7 +35,7 @@ Route::post('/users',[UserController::class,'store']);
 
 Route::post("/users/{id}",[UserController::class,'update']);
 
-Route::delete("/users/{id}",[UserController::class,'destroy']);
+Route::get("/users/{id}",[UserController::class,'destroy']);
 
 Route::get('/orders',[OrderController::class,'index']);
 

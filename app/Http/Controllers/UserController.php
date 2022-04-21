@@ -110,11 +110,6 @@ class UserController extends Controller
     public function destroy($id)
     {
         $users=User::find($id);
-        
-        if(!$users)
-        {
-            return back()->with('Error','User not Found');
-        }
         $users->delete();
         return back()->with('Success','User Deleted Successfully!');
     }
