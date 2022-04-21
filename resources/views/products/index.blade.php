@@ -191,8 +191,8 @@
           </div>
 
           <div class="form-group">
-              <label for="">Stock</label>
-              <input type="number" name="alert_stock" id="" class="form-control">
+              <label for="">Brand</label>
+              <input type="text" name="brand" id="" class="form-control">
           </div>
 
           <div class="form-group">
@@ -205,26 +205,18 @@
               <input type="number" name="quantity" id="" class="form-control">
           </div>
 
+          <div class="form-group">
+              <label for="">Stock</label>
+              <input type="number" name="alert_stock" id="" class="form-control">
+          </div>
+
           <div class="form-group"> 
               <label for="">Description</label>
               <textarea name="description" id="" cols="30" rows="2" class="form-control"></textarea>
           </div>
 
-          <div class="form-group">
-              <label for="">Brand</label>
-              <input type="text" name="brand" id="" class="form-control">
-          </div>
-
-          <div class="form-group">
-              <label for="">Role</label>
-              <select name="is_admin" id="" class="form-control">
-                  <option value="1">Admin</option>
-                  <option value="2">Cashier</option>
-              </select>
-          </div>
-
         <div class="modal-footer">
-            <button class="btn btn-primary btn-block">Save User</button>
+            <button class="btn btn-primary btn-block">Save Product</button>
         </div>
 
       </form>
